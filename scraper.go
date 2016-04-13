@@ -17,7 +17,7 @@ func main() {
 	}
 	defer file.Close()
 
-	os.Mkdir("data", 0644)
+	os.Mkdir("data", 0744)
 
 	//For each line
 	scanner := bufio.NewScanner(file)
@@ -31,9 +31,10 @@ func main() {
 }
 
 //fetch a url
+// the local ./data directory should already be here.
 func fetch(index int, url string) {
 	//Choose a filename
-	filename := fmt.Sprintf("%v.html", index)
+	filename := fmt.Sprintf("data/%v.html", index)
 	fmt.Println("fetching", url)
 
 	// GET the url
