@@ -17,7 +17,7 @@ func main() {
 	}
 	defer file.Close()
 
-	// os.Mkdir("data/elks", 0644)
+	os.Mkdir("data", 0644)
 
 	//For each line
 	scanner := bufio.NewScanner(file)
