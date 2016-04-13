@@ -11,7 +11,7 @@ import (
 func main() {
 
 	// Open a file
-	file, err := os.Open("elks_urls.txt")
+	file, err := os.Open("urls.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
